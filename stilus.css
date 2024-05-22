@@ -3,20 +3,21 @@ main {
     margin: auto;
 }
 
-.jatekter{
+.jatekter {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap:5px;
+    gap: 5px;
 }
 
 .jatekter div {
     border: 1px solid gray;
-    aspect-ratio: 1; /*amilyen magas*/
+    aspect-ratio: 1;
+    /*amilyen magas*/
     padding: 2px;
     font-size: 30px;
     text-align: center;
 }
 
-.elem{
+.elem {
     width: 20px;
 }
