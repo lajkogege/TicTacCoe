@@ -15,10 +15,15 @@ export default class Elem {
         //a div elem megfogása
         this.#divElem = this.#szuloElem.children("div:last-child");
         console.log(this.#divElem)
+
         this.#divElem.on("click", function () {
             /* Névtelen fügvényként Function használva a This arra a Html Elem-re mutat, ami kiváltottaaz Eseményt.
             Nyíl függvény esetén a This a konkrét Objektum Példányra mutatt.*/
-            console.log(this)
+            /*csak akkor tudjunk kattintani, ha még nincs benne érték*/
+            if (this.#ertek === " ") {
+                this.#trigger("kattintasom");
+            }
+
 
         })
     }
@@ -38,7 +43,7 @@ export default class Elem {
     #trigger(esemenyNev) {
         //Létrehozzunk egy saját eseményt
         //Osztály amit használunk CustomEvent*/
-        const e = new CustomEvent(esemenyNev,{detail:this.#index});
+        const e = new CustomEvent(esemenyNev, { detail: this.#index });
         //Hozzá rendelem az eseményt a teljes ablakhoz. Az eseményt elérhetővé tesszem az egész programban
         window.dispatchEvent(e);
     }

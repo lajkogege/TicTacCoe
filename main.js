@@ -9,6 +9,16 @@ new JatekTer(jatekLISTA);
 
 
 /*feliratkozom a saját kattintásom eseményemre*/
-$(window).on("kattintasom", (event)=>{
+$(window).on("kattintasom", (event) => {
     console.log(event.detail)
+    /*Megváltoztattam a program állapotát  */
+    let index = event.detail;
+    if (lepes / 2 === 0) {
+        jatekLISTA[index] = "X";
+    } else {
+        jatekLISTA[index] = "O";
+    }
+    lepes++;
+    /*Újra megjelenítem a program állapotát*/
+    new JatekTer(jatekLISTA);
 })
