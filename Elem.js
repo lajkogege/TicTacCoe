@@ -16,7 +16,7 @@ export default class Elem {
         this.#divElem = this.#szuloElem.children("div:last-child");
         console.log(this.#divElem)
 
-        this.#divElem.on("click", function () {
+        this.#divElem.on("click", ()=> {
             /* Névtelen fügvényként Function használva a This arra a Html Elem-re mutat, ami kiváltottaaz Eseményt.
             Nyíl függvény esetén a This a konkrét Objektum Példányra mutatt.*/
             /*csak akkor tudjunk kattintani, ha még nincs benne érték*/
