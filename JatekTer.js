@@ -10,7 +10,7 @@ export default class JatekTer {
 
         for (let index = 0; index < this.JatekLISTA.length; index++) {
             const elem = new Elem(this.#JatekLISTA[index], szuloElem);
-
+            console.log("Oke")
         }
     }
 }

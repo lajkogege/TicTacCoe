@@ -18,6 +18,7 @@ export default class Elem {
                 ${this.#ertek}
             </p>
         </div>`
+        console.log("Oke")
         this.#szuloElem.append(txt);
     }
 }
